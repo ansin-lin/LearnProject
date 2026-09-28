@@ -10,3 +10,9 @@
 !/詳細設計/01A_画面詳細設計書テンプレート.xlsx
 !/詳細設計/01B_API詳細設計書テンプレート.xlsx
 !/詳細設計/画面詳細設計/01_SCR-001_ログイン画面詳細設計書_React.xlsx
+!/詳細設計/API詳細設計/001_API-AUTH-001_ログインAPI詳細設計書.xlsx
+
+# Share only the selected review result report.
+!/品質管理資料/
+/品質管理資料/**
+!/品質管理資料/20260928_SCR001_APIAUTH001_Review修正結果.md
