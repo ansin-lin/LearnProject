@@ -1,0 +1,4 @@
+# Track only the approved basic design documents and this ignore policy.
+/*
+!/.gitignore
+!/基本設計/
