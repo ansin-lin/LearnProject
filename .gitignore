@@ -1,4 +1,11 @@
-# Track only the approved basic design documents and this ignore policy.
+# Track basic design and explicitly selected detailed design templates.
 /*
 !/.gitignore
 !/基本設計/
+
+# Allow detailed design directories, but ignore files unless listed below.
+!/詳細設計/
+/詳細設計/**
+!/詳細設計/**/
+!/詳細設計/01A_画面詳細設計書テンプレート.xlsx
+!/詳細設計/01B_API詳細設計書テンプレート.xlsx
