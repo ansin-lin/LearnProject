@@ -9,6 +9,10 @@
 !/詳細設計/**/
 !/詳細設計/01A_画面詳細設計書テンプレート.xlsx
 !/詳細設計/01B_API詳細設計書テンプレート.xlsx
+!/詳細設計/01E_DB詳細設計書テンプレート.xlsx
+!/詳細設計/02_詳細設計書_Checklist.xlsx
+!/詳細設計/03_詳細設計書_書写規範.xlsx
+!/詳細設計/DB詳細設計/01_DB-DD-01_ユーザー・組織・権限DB詳細設計書.xlsx
 !/詳細設計/画面詳細設計/01_SCR-001_ログイン画面詳細設計書_React.xlsx
 !/詳細設計/API詳細設計/001_API-AUTH-001_ログインAPI詳細設計書.xlsx
 
@@ -16,3 +20,10 @@
 !/品質管理資料/
 /品質管理資料/**
 !/品質管理資料/20260928_SCR001_APIAUTH001_Review修正結果.md
+
+# Archived detailed designs are local-only, including all nested folders.
+/詳細設計/bk/
+
+# Shared member schedule. Other root documents remain local-only.
+!/メンバー用_子スケジュール_テンプレート.xlsx
+/bk/
