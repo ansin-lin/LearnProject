@@ -1,0 +1,14 @@
+**/node_modules/
+**/dist/
+**/target/
+**/coverage/
+**/.env
+**/.env.local
+**/.env.*
+!**/.env.example
+**/*.log
+**/.classpath
+**/.project
+**/.settings/
+.idea/
+.DS_Store
