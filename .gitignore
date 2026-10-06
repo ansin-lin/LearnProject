@@ -2,7 +2,6 @@
 /*
 !/.gitignore
 !/基本設計/
-!/Company_WorkHub_開発用初期プロジェクト/
 
 # Allow detailed design directories, but ignore files unless listed below.
 !/詳細設計/
@@ -27,6 +26,6 @@
 # Archived detailed designs are local-only, including all nested folders.
 /詳細設計/bk/
 
-# Member schedule is managed in OneDrive, not Git.
-/メンバー用_子スケジュール_テンプレート.xlsx
+# Shared member schedule. Other root documents remain local-only.
+!/メンバー用_子スケジュール_テンプレート.xlsx
 /bk/
