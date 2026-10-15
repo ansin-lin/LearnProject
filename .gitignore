@@ -2,22 +2,29 @@
 /*
 !/.gitignore
 !/基本設計/
-!/Company_WorkHub_開発用初期プロジェクト/
+!/Company_WorkHub_training/
+!/.github/
+!/.github/**
 
 # Allow detailed design directories, but ignore files unless listed below.
 !/詳細設計/
 /詳細設計/**
 !/詳細設計/**/
+!/詳細設計/00_詳細設計成果物一覧.xlsx
 !/詳細設計/01A_画面詳細設計書テンプレート.xlsx
 !/詳細設計/01B_API詳細設計書テンプレート.xlsx
 !/詳細設計/01C_共通処理詳細設計書テンプレート.xlsx
 !/詳細設計/共通処理詳細設計/01_CMN-FE-001_Reactアプリ初期化・Route・共通Layout詳細設計書.xlsx
+!/詳細設計/共通処理詳細設計/04_CMN-BE-001_共通Response・入力検証・例外変換詳細設計書.xlsx
 !/詳細設計/01E_DB詳細設計書テンプレート.xlsx
 !/詳細設計/02_詳細設計書_Checklist.xlsx
 !/詳細設計/03_詳細設計書_書写規範.xlsx
 !/詳細設計/DB詳細設計/01_DB-DD-01_ユーザー・組織・権限DB詳細設計書.xlsx
 !/詳細設計/画面詳細設計/01_SCR-001_ログイン画面詳細設計書_React.xlsx
+!/詳細設計/画面詳細設計/03_SCR-003_従業員一覧画面詳細設計書_React.xlsx
 !/詳細設計/API詳細設計/001_API-AUTH-001_ログインAPI詳細設計書.xlsx
+!/詳細設計/API詳細設計/025_API-EMP-004_従業員更新API詳細設計書.xlsx
+!/詳細設計/API詳細設計/027_API-EMP-006_従業員Excel取込API詳細設計書.xlsx
 
 # Share only the selected review result report.
 !/品質管理資料/
@@ -29,4 +36,5 @@
 
 # Member schedule is managed in OneDrive, not Git.
 /メンバー用_子スケジュール_テンプレート.xlsx
+/メンバー用_子スケジュール.xlsx
 /bk/

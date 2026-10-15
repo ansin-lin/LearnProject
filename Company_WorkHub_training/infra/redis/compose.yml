@@ -1,0 +1,19 @@
+services:
+  redis:
+    image: redis:7.4.6-alpine
+    container_name: company-workhub-training-redis
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf:ro
+      - company-workhub-training-redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "workhub_local", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  company-workhub-training-redis-data:

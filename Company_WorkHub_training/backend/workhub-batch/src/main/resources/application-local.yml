@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/company_workhub
+    username: workhub_app
+    password: workhub_local
+    hikari:
+      connection-timeout: 5000
+      initialization-fail-timeout: -1
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: workhub_local
+      connect-timeout: 3s
+      timeout: 3s

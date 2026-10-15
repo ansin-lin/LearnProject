@@ -23,7 +23,7 @@
 | 覆盖率 | JaCoCo | 单体测试覆盖率统计 |
 | 静态检查 | Checkstyle + SpotBugs | Java 编码规范和缺陷检查 |
 | 构建工具 | Maven | 编译、测试和打包 |
-| 容器 | Docker + Docker Compose | PostgreSQL、Redis 和本地运行环境 |
+| 容器 | Docker + Docker Compose | 开发/单体测试阶段仅用于每位成员的本地 Redis |
 | Web 服务器 | Nginx | 前端静态资源及 API 反向代理 |
 | 版本管理 | Git + GitHub | Feature Branch、Pull Request 和 Review |
 
@@ -69,6 +69,9 @@
 - Flyway、Apache POI 和 Spring Batch 为项目必需技术；MapStruct、Testcontainers 按下方条件使用。
 - Batch 程序由外部命令启动，不将正式执行日程固定在 Web 应用的 `@Scheduled` 中。练习环境允许手动启动或使用 cron 模拟调度。
 - Batch 按业务特点选择 Tasklet 或 Chunk：单次处理使用 Tasklet，大量逐件处理使用 Chunk；使用 Redis SET NX 防止重复启动。
+- 开发和单体测试阶段，PostgreSQL 16 由每位成员在本机安装，Redis 7.4.6 由本机 Docker 启动；不依赖 Leader 电脑。
+- 结合测试阶段才连接 Leader 管理的共享 PostgreSQL / Redis，连接信息使用 Git 管理外的 Spring Boot 外部配置文件。
+- Spring Boot 不读取 `.env`；配置按 `application.yml`、`application-local.yml`、`application-test.yml` 与外部 `application-integration.yml` 分层管理。
 
 ## 版本固定与依赖管理
 
