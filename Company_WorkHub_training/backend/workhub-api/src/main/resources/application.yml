@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: Company_WorkHub_training-api
+  profiles:
+    default: local
+  jackson:
+    time-zone: Asia/Tokyo
+  flyway:
+    enabled: false
+  sql:
+    init:
+      mode: never
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+      probes:
+        enabled: true
+      group:
+        readiness:
+          include: readinessState,db,redis
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+workhub:
+  redis:
+    key-prefix: "company-workhub:local:"

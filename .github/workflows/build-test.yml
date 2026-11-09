@@ -1,0 +1,58 @@
+name: Company WorkHub Build and Test
+
+on:
+  push:
+    paths:
+      - "Company_WorkHub_training/**"
+      - ".github/workflows/build-test.yml"
+  pull_request:
+    paths:
+      - "Company_WorkHub_training/**"
+      - ".github/workflows/build-test.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Company_WorkHub_training/backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+          cache-dependency-path: Company_WorkHub_training/backend/pom.xml
+      - name: Verify backend
+        run: |
+          chmod +x mvnw
+          ./mvnw -Pquality verify
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Company_WorkHub_training/frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.13.1"
+          cache: npm
+          cache-dependency-path: Company_WorkHub_training/frontend/package-lock.json
+      - name: Use project npm version
+        run: npm install --global npm@10
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Check formatting
+        run: npm run format:check
+      - name: Unit test
+        run: npm run test
+      - name: Production build
+        run: npm run build

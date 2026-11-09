@@ -1,0 +1,11 @@
+**/node_modules/
+**/dist/
+**/target/
+**/coverage/
+**/*.log
+**/.classpath
+**/.project
+**/.settings/
+.idea/
+.DS_Store
+/config/application-integration.yml
